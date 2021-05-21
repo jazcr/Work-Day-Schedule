@@ -13,6 +13,10 @@ textarea {
   padding: 10px;
 }
 
+i {
+  font-size: 2em;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -27,6 +31,7 @@ width: 100vw;
 }
 
 .description {
+  text-align: center;
   width: 70%;
   white-space: pre-wrap;
 }
