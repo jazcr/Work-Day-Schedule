@@ -4,22 +4,15 @@ var eventDescription = $('.description');
 const saveBtn = $('.saveBtn');
 
 
-$( ".saveBtn" ).each(function( index ) {
-    $(this).on("click", function(){
-        var textValue = $(saveBtn).siblings(".description").val();
-        localStorage.setItem('textValue', textValue)
+
+    $(".saveBtn").on("click", function(){
+        console.log($(this))
+        var textValue = $(this).siblings(".description").val();
+        var timeValue = $(this).siblings(".hour").text();
+        console.log(timeValue)
+        localStorage.setItem(timeValue, textValue)
     });
 
-});
 
 
-
-// const saveLocStor = () => {
-//     var textValue = $(saveBtn).siblings(".description").val();
-//     console.log(textValue)
-//     localStorage.setItem('textValue', textValue)
-
-// }
-
-// $(".saveBtn").click(saveLocStor);
 
