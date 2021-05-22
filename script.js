@@ -1,13 +1,17 @@
 
 
-var eventDescription = document.querySelector('.description');
-const saveBtn = document.querySelector('.saveBtn');
+var eventDescription = $('.description');
+const saveBtn = $('.saveBtn');
 
 
 const saveLocStor = () => {
-    const textValue = eventDescription.value;
+
+    var textValue = $(saveBtn).siblings(".description").val();
     console.log(textValue)
     localStorage.setItem('textValue', textValue)
 }
 
-saveBtn.addEventListener('click', saveLocStor)
+$(".saveBtn").click(saveLocStor);
+
+
+
