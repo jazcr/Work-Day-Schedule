@@ -5,8 +5,9 @@ const saveBtn = document.querySelector('.saveBtn');
 
 
 const saveLocStor = () => {
-    textareaObject.value = text
-    localStorage.setItem('textInput', text.textContent)
+    const textValue = eventDescription.value;
+    console.log(textValue)
+    localStorage.setItem('textValue', textValue)
 }
 
 saveBtn.addEventListener('click', saveLocStor)
