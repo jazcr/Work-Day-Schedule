@@ -1,12 +1,31 @@
 
-var jun = moment("2014-06-01T12:00:00Z");
-var dec = moment("2014-12-01T12:00:00Z");
-
 var eventDescription = $('.description');
 const saveBtn = $('.saveBtn');
 
-$("#currentDay") = jun.tz('America/Denver').format('ha z');  
+//display current time on page
+function updateTime(){
+    var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+   $('#currentDay').html( currentTime );
+};
 
+//keep time current by updating by one second
+updateTime();
+setInterval(function(){
+   updateTime();
+}, 1000);
+
+//if current time is less than the time block, change color of div to grey
+if (updateTime() < $("#hour").text) {
+    $(".time-block").addClass("past")
+} 
+    //if current time equal to the time block, change color of div to red
+    else if (updateTime() == $("#hour".text)) {
+    $(".time-block").addClass("present")
+}
+    //if current time is greater than time block, change color of div to green
+    else {
+    $(".time-block").addClass("future")
+}
 
 $(".saveBtn").on("click", function(){
     console.log($(this))
